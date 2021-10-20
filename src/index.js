@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.js';
-import ReadRemoteFile from './CsvJSON.js'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
