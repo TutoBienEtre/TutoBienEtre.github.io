@@ -1,5 +1,4 @@
 import './App.css';
-import './data/data.csv';
 import logotuto from './LogoTuto.png'
 import React, { useEffect, useState }  from 'react';
 import { readRemoteFile } from 'react-papaparse';
@@ -7,18 +6,19 @@ import bg from './bg.jpg';
 
  
 
+const {createServer} = require('http')
 
-let j = require('./data/data.json');
+const server = createServer(() => {})
+
+server.listen(3000)
 
 
-const runCallback = (cb) => {
-  return cb();
-};
+
+
 
 
 function App() {
 
-  //const [ Data, setData ] = useState(null);
 
   const [ rows, setRows ] = useState([]);
 
@@ -30,7 +30,6 @@ function App() {
    
     readRemoteFile('https://docs.google.com/spreadsheets/d/e/2PACX-1vRXi-TcKwaEYai8I5dCjOKlaMJ7AR7E5TCAq72muzObYC-YDHQahJvuvhGLYl3z0A/pub?gid=191056284&single=true&output=csv', {
       complete: (results) => {
-       // setData(results);
       const temp = [];
       const nombreMax = results.data.length;
       temp.push(
@@ -50,7 +49,6 @@ function App() {
 
         temp.push(
           <div class="containerRow">
-            
             <p class="rectangleRank">{i}</p>
             <p class="rectangleName">{results.data[i][0]}</p>
             <p class="rectangleScore">{results.data[i][1]}</p>
@@ -58,33 +56,13 @@ function App() {
           
         );
 
-        /*temp.push(
-          <p class="rectangleRank">
-            {i}
-            <p class="rectangleName">
-              {results.data[i][0]}
-              <p class="rectangleScore">
-              </p>
-            </p>
-            {results.data[i][1]}
-          </p>
-        );*/
       }
 
        setRows(temp);
       }, 
     });
   }, []);
-  /*
-  var AffichageRank = () => {  
-    const temp = [];
-   
-    for (var i = 0; i < nombreMax; i++) {
-      row.push(<p class="rectangleRank">{i + 1}<p class="rectangleName">{Data}<p class="rectangleScore">{j.Data[i].POINTS}</p></p></p>);
-    }
-    return row;
-  };*/
-  
+
 
   return (   
     <div className="App" style={{backgroundImage: `url(${bg})`}}>
