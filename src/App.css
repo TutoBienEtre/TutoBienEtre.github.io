@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  background-attachment: fixed;
+  background-size: cover;
+  /*min-height: 100vh;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-bottom: 21vmin;
+  max-width: 100%;
+  font-weight: bold;
+  
+}
+
+.App-bg {
+  max-width: 100%;
+  position:fixed;
+  top: -10vmin;
+  opacity:0%;
+  
+}
+
+.App-logo {
+  max-width: 12%;
+  position:fixed;
+  bottom: 0vmin;
+  right:3vmin;
+  opacity:100%;
+  filter: drop-shadow(0 0 0.5rem black);
+}
+
+.Titre {
+  color:var(--text-color);
+  filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));
+  margin-bottom: -2vmin;
+}
+
+.credits {
+  position:relative;
+  font-size: 40%;
+  bottom: -20vmin;
+
+} 
+:root {
+
+  --color1: rgba(64, 20, 100, 0.76);
+  --color2: rgba(255, 192, 149, 0.76);
+  --text-color:rgb(250, 219, 171);
+}
+
+.TitreTableau {
+
+  color:white;
+  font-size:80%;
+  margin-bottom: -2vmin;
+
+}
+
+.ScoresTableau {
+
+  color:white;
+  text-align: center;
+  font-size:80%;
+  margin-left: 33vh;
+  margin-bottom: -2vmin;
+  
+}
+
+.NumeroTableau {
+
+  color:white;
+  margin-left:2vh;
+  font-size:80%;
+  margin-right:33vh;
+  margin-bottom: -2vmin;
+
+}
+
+.containerColumn {
+
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.containerRow{
+
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0vmin;
+
+}
+
+.rectangleRank {
+
+  height: 10vmin;
+  width: 10vmin;
+  background-color:var(--color1);
+  border-radius: 1vmin;
+  text-align: center;
+  line-height:9vmin;
+  font-weight:600;
+  font-size: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: -1vmin;
+  
+}
+
+.rectangleName {
+  
+  height: 10vmin;
+  width: 80vmin;
+  border-radius: 1vmin;
+  background-color:rgba(119, 31, 190, 0.795);
+  text-align: center;
+  line-height:9vmin;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:600;
+  font-size: 100%;
+  margin-bottom: -1vmin;
+  margin-right: 1vmin;
+  margin-left: 1vmin;
+
+}
+
+.rectangleScore {
+  height: 10vmin;
+  width: 10vmin;
+  background-color: rgba(64, 20, 100, 0.76);
+  border-radius: 1vmin;
+  text-align: center;
+  line-height:9vmin;
+  margin-bottom: -1vmin;
+
+}
+
+
